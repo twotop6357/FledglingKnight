@@ -3025,6 +3025,7 @@ GameObject:
   - component: {fileID: 1897104799}
   - component: {fileID: 1897104800}
   - component: {fileID: 1897104801}
+  - component: {fileID: 1897104802}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -3221,6 +3222,18 @@ MonoBehaviour:
     speed: 5
     attackSO: {fileID: 11400000, guid: 94c20a0c893bc0c4792146c40939564f, type: 2}
   statModifiers: []
+--- !u!114 &1897104802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897104792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e035ec02ba96aa244bdf9e8bccf805f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1994171852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3296,7 +3309,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a25ca5ed66f7e54c8e97c7ce3315866, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 58ae80fcbafaf43409f6c37383ba9a8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3317,7 +3330,7 @@ Animator:
   m_GameObject: {fileID: 1994171852}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 197a0e50f49feba4abf813561c5e3a64, type: 2}
+  m_Controller: {fileID: 9100000, guid: 98ab86889210dd94d9388aad7d4c3199, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
