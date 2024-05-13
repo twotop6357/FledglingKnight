@@ -1992,6 +1992,8 @@ GameObject:
   - component: {fileID: 1370063577}
   - component: {fileID: 1370063576}
   - component: {fileID: 1370063575}
+  - component: {fileID: 1370063583}
+  - component: {fileID: 1370063582}
   m_Layer: 6
   m_Name: Skeleton
   m_TagString: Untagged
@@ -2144,6 +2146,31 @@ Transform:
   - {fileID: 745777103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1370063582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370063574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8adcbaaf25e0614f81c09c4d5bb3560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1370063583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370063574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66344fb56ab77a647b9c45a7dca576ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
 --- !u!1 &1428696589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,6 +2188,8 @@ GameObject:
   - component: {fileID: 1428696592}
   - component: {fileID: 1428696591}
   - component: {fileID: 1428696590}
+  - component: {fileID: 1428696600}
+  - component: {fileID: 1428696599}
   m_Layer: 6
   m_Name: Archer
   m_TagString: Untagged
@@ -2341,6 +2370,31 @@ Transform:
   - {fileID: 1279408052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428696599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428696589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8adcbaaf25e0614f81c09c4d5bb3560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1428696600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428696589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66344fb56ab77a647b9c45a7dca576ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
 --- !u!1 &1485710057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3726,6 +3780,7 @@ GameObject:
   - component: {fileID: 1897104800}
   - component: {fileID: 1897104801}
   - component: {fileID: 1897104802}
+  - component: {fileID: 1897104803}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3933,6 +3988,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e035ec02ba96aa244bdf9e8bccf805f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1897104803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897104792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66344fb56ab77a647b9c45a7dca576ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
 --- !u!1 &1994171852
 GameObject:
   m_ObjectHideFlags: 0
