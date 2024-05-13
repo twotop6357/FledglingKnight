@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class HealthSystem : MonoBehaviour
     public event Action OnHeal;
     public event Action OnDeath;
     public event Action OnInvincibilityEnd;
+    [SerializeField] private Image hpBar;
 
     public float CurrentHealth {  get; private set; }
 
@@ -23,6 +25,10 @@ public class HealthSystem : MonoBehaviour
     private void Start()
     {
         CurrentHealth = MaxHealth;
+        if (this.tag == "Player" && hpBar != null)
+        {
+            hpBar.fillAmount = CurrentHealth * 0.1f;
+        }
     }
     private void Update()
     {
@@ -46,7 +52,10 @@ public class HealthSystem : MonoBehaviour
         timeSinceLastChange = 0f;
         CurrentHealth += change;
         CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
-
+        if(this.tag == "Player")
+        {
+            hpBar.fillAmount = CurrentHealth * 0.1f;
+        }
         if (CurrentHealth <= 0f)
         {
             CallDeath();
