@@ -255,12 +255,14 @@ MonoBehaviour:
   achievementText: {fileID: 241275638}
   reputation: {fileID: 884846392}
   scanObject: {fileID: 0}
+  inGameStatus: {fileID: 1716132706}
   isAction: 0
   talkIndex: 0
   sceneVisitNum: 0
   nickName: {fileID: 1718309736}
   name: 
   achievement: 0
+  num: 0
 --- !u!114 &135743135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,6 +1881,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
       propertyPath: m_Name
       value: PF Props Pillar (3)
@@ -2519,6 +2525,10 @@ PrefabInstance:
     - target: {fileID: 7947911505737750448, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
       propertyPath: m_Name
@@ -8099,6 +8109,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
       propertyPath: m_Name
       value: PF Props Pillar (1)
@@ -8106,7 +8120,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1795662736}
   m_SourcePrefab: {fileID: 100100000, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
 --- !u!4 &1174146590 stripped
 Transform:
@@ -12722,6 +12739,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7947911505737750450, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
       propertyPath: m_Name
       value: PF Props Pillar (5)
@@ -13405,6 +13426,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSpeed: 5
   player: {fileID: 1157432034}
+--- !u!1 &1795662733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7947911505737750455, guid: 41ea6afb203377e42995d7d016ea5907, type: 3}
+  m_PrefabInstance: {fileID: 1174146589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1795662736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795662733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846f907553e8d99409c5f16ba396bc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1157432034}
+  actionDistance: 1
 --- !u!1 &1802043062
 GameObject:
   m_ObjectHideFlags: 0

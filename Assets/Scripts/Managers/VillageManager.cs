@@ -15,12 +15,14 @@ public class VillageManager : MonoBehaviour
     [SerializeField] private Text achievementText;
     [SerializeField] private Text reputation;
     [SerializeField] GameObject scanObject;
+    [SerializeField] private GameObject inGameStatus;
     public bool isAction;
     public int talkIndex;
     public int sceneVisitNum;
     [SerializeField] private Text nickName;
     public string name;
     [SerializeField] private int achievement;
+    public int num;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +32,20 @@ public class VillageManager : MonoBehaviour
         achievement = PlayerPrefs.GetInt("achievement");
         if (sceneVisitNum == 0)
         {
+            RemoveAll();
             startFrame.gameObject.SetActive(true);
-            name = nickName.text;
-            PlayerPrefs.SetString("name", name);
+            //PlayerPrefs.SetString("name", name);
         }
-        name = PlayerPrefs.GetString("name");
+        else
+        {
+            inGameStatus.gameObject.SetActive(true);
+            name = PlayerPrefs.GetString("name");
+            nickName.text = name;
+        }
         sceneVisitNum = 1;
         PlayerPrefs.SetInt("sceneVisitNum", sceneVisitNum);
         PlayerPrefs.SetInt("achievement", achievement);
-        PlayerPrefs.SetString("name", name);
+        //PlayerPrefs.SetString("name", name);
         reputation.text = achievement.ToString();
         if(achievement < 10)
         {
@@ -68,5 +75,9 @@ public class VillageManager : MonoBehaviour
     {
         DateTime currentTime = DateTime.Now;
         realTime.text = currentTime.ToString("HH:mm");
+    }
+    public void RemoveAll()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
