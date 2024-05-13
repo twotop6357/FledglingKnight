@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -18,9 +19,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image hpBar;
     [SerializeField] private Image VicFrame;
     [SerializeField] private Image DefFrame;
+    public int sceneVisitNum;
+    public int achievement;
 
     private void Awake()
     {
+        sceneVisitNum = PlayerPrefs.GetInt("sceneVisitNum");
+        achievement = PlayerPrefs.GetInt("achievement");
         if(Instance != null) Destroy(gameObject);
         {
             Instance = this;
@@ -70,5 +75,18 @@ public class GameManager : MonoBehaviour
             skeleton.transform.position = pos;
             Instantiate(skeleton, transform);
         }
+    }
+
+    public void LoseReturn()
+    {
+        PlayerPrefs.SetInt("sceneVisitNum",sceneVisitNum);
+        PlayerPrefs.SetInt("achievement", achievement - 10);
+        SceneManager.LoadScene("VillageScene");
+    }
+    public void WinReturn()
+    {
+        PlayerPrefs.SetInt("sceneVisitNum", sceneVisitNum);
+        PlayerPrefs.SetInt("achievement", achievement + 10);
+        SceneManager.LoadScene("VillageScene");
     }
 }

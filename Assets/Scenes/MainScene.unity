@@ -900,7 +900,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 300712257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213129579}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoseReturn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &300712257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2332,7 +2344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 967404979}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1213129579}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: WinReturn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &967404979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,6 +2677,8 @@ MonoBehaviour:
   hpBar: {fileID: 440464404}
   VicFrame: {fileID: 1262517895}
   DefFrame: {fileID: 817814576}
+  sceneVisitNum: 0
+  achievement: 0
 --- !u!1 &1262517893
 GameObject:
   m_ObjectHideFlags: 0
