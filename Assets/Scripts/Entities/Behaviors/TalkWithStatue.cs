@@ -40,7 +40,7 @@ public class TalkWithStatue : MonoBehaviour
             string[] nicknames = { "개똥이", "돌쇠", "만식이", "웅복이", "용구" };
             nickName.text = nicknames[rand];
         }
-
+        PlayerPrefs.SetString("name", nickName.text);
         nickNamePanel.gameObject.SetActive(false);
         inGameInfo.gameObject.SetActive(true);
     }

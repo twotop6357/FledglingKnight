@@ -18,19 +18,23 @@ public class VillageManager : MonoBehaviour
     public bool isAction;
     public int talkIndex;
     public int sceneVisitNum;
+    [SerializeField] private Text nickName;
     public string name;
     [SerializeField] private int achievement;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         sceneVisitNum = PlayerPrefs.GetInt("sceneVisitNum");
         achievement = PlayerPrefs.GetInt("achievement");
-        name = PlayerPrefs.GetString("name");
         if (sceneVisitNum == 0)
         {
             startFrame.gameObject.SetActive(true);
+            name = nickName.text;
+            PlayerPrefs.SetString("name", name);
         }
+        name = PlayerPrefs.GetString("name");
         sceneVisitNum = 1;
         PlayerPrefs.SetInt("sceneVisitNum", sceneVisitNum);
         PlayerPrefs.SetInt("achievement", achievement);
